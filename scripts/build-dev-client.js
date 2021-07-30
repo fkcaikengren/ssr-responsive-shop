@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const { spawn } = require('child_process');
-const clientConfig = require('../webpack.client.config');
+const clientConfig = require('../webpack/webpack.client.config');
 
 const PORT = process.env.DEV_CLIENT_PORT;
 const HOST = process.env.DEV_CLIENT_HOST;
@@ -33,7 +33,8 @@ const webpackDevServerOptions = {
   publicPath: `http://${HOST}:${PORT}/dist`,
   hot: true,  //热更新
   open: false, //自动打开浏览器
-  inline: true,
+  inline: true, //
+  quiet: true, //true不会输出compile的详细信息
   clientLogLevel: 'error',
   compress: true, //gzip压缩
   watchOptions: {

@@ -1,0 +1,35 @@
+
+
+:local(.footer){
+  background-color: #555;
+  color: #fff;
+  padding: 0 32px;
+  &__main{
+    padding: 46px 0;
+    display: flex;
+    max-width: 800px;
+  }
+
+  &__nav{
+    flex: 1;
+    & > h3{
+      font-size: 16px;
+      font-weight: 500;
+    }
+    li{
+      padding: 6px 0;
+      & > a{
+        color: #fff;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      
+    }
+  }
+
+  &__bottom{
+    padding-bottom: 30px;
+  }
+
+}

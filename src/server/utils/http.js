@@ -11,7 +11,7 @@ import apiConfig,{baseUrl} from '../../config/api'
 //simply handle https problem
 const httpsAgent = new https.Agent({
     rejectUnauthorized: false, // (NOTE: this will disable client verification)
-    cert: fs.readFileSync(path.resolve(__dirname,'../intermediate.pem')),
+    // cert: fs.readFileSync(path.resolve(__dirname,'../intermediate.pem')),
 })
 
 //create an instance of axios

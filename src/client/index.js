@@ -8,9 +8,10 @@ import {BrowserRouter as Router } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 import { loadableReady } from '@loadable/component'
 import routes from '../routes'
-import '../sass/base.scss' //client.js里引入的css会被打包为main.css
 import { Provider } from 'react-redux';
 import getClientStore from '../store/clientStore'
+import '../sass/base.scss' //client.js里引入的css会被打包为main.css
+
 
 // hydrate的作用：不同于render方法，它主要是完成事件注入
 /*

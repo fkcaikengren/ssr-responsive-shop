@@ -1,10 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import WrapPage from '../../components/WrapPage'
+import style from './style.scss'
 
 function Home() {
   return (
-    <div>
-      homex
+    <div className={style.home} >
+      <Link to='/introduce'>Go</Link>
     </div>
   )
 }

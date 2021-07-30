@@ -1,0 +1,13 @@
+
+@import "sass/mixin.scss";
+
+:local(.home){
+  padding: 16px;
+  background-color: red;
+}
+
+@include desktop{
+  :local(.home){
+    padding: 32px;
+  }
+}

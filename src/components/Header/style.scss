@@ -1,7 +1,83 @@
+@import "sass/mixin.scss";
+
+
 :local(.header) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  height: 50px;
+  height: 54px;
+  overflow: hidden;
+
+  &__menuIcon{
+    padding: 15px 8px 15px 16px;
+  }
+
+  &__logo{
+    &>img{
+      height: 32px;
+      width: auto;
+    }
+  }
+
+  &__cart{
+    padding: 15px 16px 15px 8px;
+  }
+
+  &__nav{
+    display: none;
+  }
 }
+
+@include tablet{
+  :local(.header){
+    height: 70px;
+  }
+
+}
+
+@include desktop{
+  :local(.header){
+    padding:0 30px;
+    &__menuIcon{
+      display: none;
+    }    
+    &__logo{
+      padding: 10px 0;
+      &>img{
+        height: 34px;
+        width: auto;
+      }
+    }
+
+    &__nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      left: 150px;
+      &>a{
+        text-align: center;
+        width: 120px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        &:hover{
+          color: red;
+          text-decoration: none;
+        }
+      }
+
+    }
+
+  }
+}
+
+
+
+
+
+
+
+

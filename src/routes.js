@@ -19,6 +19,14 @@ const Home = loadable(
     })
 )
 
+const Introduce = loadable(
+    () => import(/*webpackChunkName:'introduce'*/"./containers/Introduce").then(c => {
+        Introduce.loadData = c.default.loadData
+        return c
+    })
+)
+
+
 
 
 
@@ -40,6 +48,12 @@ export default [
                 key: 'home',
                 exact: true,
                 component: Home,
+            },
+            {
+                path: '/introduce',
+                key: 'introduce',
+                exact: true,
+                component: Introduce,
             },
         ]
     }
