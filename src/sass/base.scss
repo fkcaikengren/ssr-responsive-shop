@@ -5,12 +5,16 @@
 // @import 'bootstrap/scss/_reboot';  //  引入样式重置
 // @import 'bootstrap/scss/_grid';  //  引入栅格
 
+@import './variant.scss';
+@import './mixin.scss';
+
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-size: 16px;
+    color: $color-dark-font;
 }
 
 #root {
@@ -34,8 +38,35 @@ ol li {
 
 a {
     text-decoration: none;
+    color: $color-dark-font;
 }
 
 a:hover {
     text-decoration: underline;
+    color: $color-main;
+}
+
+button{
+    border: none;
+}
+
+.btn{
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-main;
+    @include main-border;
+    border-radius: 4px;
+    padding: 10px 30px;
+}
+
+.primary-btn{
+    background-color: $color-main;
+}
+
+.primary-btn:hover{
+    background-color: $color-dark-main;
+}
+
+.primary-btn.btn{
+    color: #fff;
 }

@@ -4,9 +4,6 @@ import WrapPage from '../../components/WrapPage'
 
 
 function Introduce() {
-
-  useEffect(() => {
-  }, [])
   return (
     <div>
       introduce ...

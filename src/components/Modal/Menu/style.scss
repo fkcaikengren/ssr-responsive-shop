@@ -1,0 +1,73 @@
+
+@import 'sass/variant.scss';
+@import 'sass/mixin.scss';
+
+:local(.menu){
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background-color: #fff;
+  @include flex(column);
+  &__header{
+    width: 100%;
+    height: 54px;
+    box-sizing: border-box;
+    @include flex;
+    @include gray-border(bottom);
+    position: relative;
+  }
+  &__logo{
+    height: 32px;
+    width: auto;
+  }
+  &__close{
+    padding: 10px;
+    margin-bottom: -2px;
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+  }
+  &__body{
+    width: 100%;
+    flex: 1;
+    @include flex;
+  }
+  &__side{
+    width: 100px;
+    height: 100%;
+    @include gray-border(right);
+    &>ul{
+      overflow: auto;
+      text-align: center;
+      padding: 20px 0;
+      &>li{
+        position: relative;
+        padding: 15px 0;
+      }
+    }
+  }
+  &__select{
+    color: $color-main;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 0;
+      @include main-border($postion:right, $width:3px);
+      height: 22px;
+    }
+  }
+  &__main{
+    height: 100%;
+    flex: 1;
+  }
+}
+
+
+@include tablet{
+  :local(.menu){
+    &__header{
+      height: 70px;
+    }
+  }
+}

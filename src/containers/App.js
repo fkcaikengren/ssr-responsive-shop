@@ -1,13 +1,14 @@
 
-import React, { Fragment } from 'react'
+import React, { useEffect } from 'react'
 import { renderRoutes } from 'react-router-config'
+import Modal from 'components/Modal'
 
 function App(props) {
-    
     return (
-        <Fragment>
+        <Modal>
+            {/* render sub routes */}
             {renderRoutes(props.route.routes)}
-        </Fragment>
+        </Modal>
     )
 }
 

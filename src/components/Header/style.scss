@@ -1,15 +1,17 @@
+@import "sass/variant.scss";
 @import "sass/mixin.scss";
 
 
 :local(.header) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 54px;
   overflow: hidden;
+  box-sizing: border-box;
+  @include flex($justify: space-between);
+  @include gray-border($postion:bottom);
 
   &__menuIcon{
     padding: 15px 8px 15px 16px;
+    cursor: pointer;
   }
 
   &__logo{
@@ -19,13 +21,19 @@
     }
   }
 
-  &__cart{
-    padding: 15px 16px 15px 8px;
+  &__right{
+    display: flex;
   }
 
-  &__nav{
-    display: none;
+  &__avatar{
+    padding: 15px 16px 15px 8px;
+    cursor: pointer;
   }
+  &__cart{
+    padding: 15px 16px 15px 8px;
+    cursor: pointer;
+  }
+
 }
 
 @include tablet{
@@ -48,29 +56,9 @@
         width: auto;
       }
     }
-
-    &__nav{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      left: 150px;
-      &>a{
-        text-align: center;
-        width: 120px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 16px;
-        font-weight: 500;
-        color: #333;
-        &:hover{
-          color: red;
-          text-decoration: none;
-        }
-      }
-
+    &__cart{
+      padding: 15px 0 15px 8px;
     }
-
   }
 }
 

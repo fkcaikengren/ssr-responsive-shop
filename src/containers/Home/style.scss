@@ -1,9 +1,9 @@
-
+@import "sass/variant.scss";
 @import "sass/mixin.scss";
 
 :local(.home){
   padding: 16px;
-  background-color: red;
+  height: 400px;
 }
 
 @include desktop{
