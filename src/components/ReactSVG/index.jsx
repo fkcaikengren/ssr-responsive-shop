@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import autoprefixer from 'autoprefixer';
 
 function ReactSVG(props) {
   const { name, role = 'img', label, width, height, color,style={}, ...rest } = props;
