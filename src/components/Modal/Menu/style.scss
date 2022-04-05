@@ -1,54 +1,69 @@
-
 @import 'sass/variant.scss';
 @import 'sass/mixin.scss';
 
-:local(.menu){
+:local(.menu) {
   width: 100%;
   max-width: 600px;
   height: 100%;
   background-color: #fff;
   @include flex(column);
-  &__header{
+
+  &__header {
     width: 100%;
-    height: 54px;
     box-sizing: border-box;
     @include flex;
     @include gray-border(bottom);
     position: relative;
+
+    @include mobile {
+      height: 54px;
+    }
+
+    @include tablet-desktop {
+      height: 70px;
+    }
   }
-  &__logo{
+
+  &__logo {
     height: 32px;
     width: auto;
   }
-  &__close{
+
+  &__close {
     padding: 10px;
     margin-bottom: -2px;
     position: absolute;
     right: 16px;
     cursor: pointer;
   }
-  &__body{
+
+  &__body {
     width: 100%;
     flex: 1;
     @include flex;
   }
-  &__side{
+
+  &__side {
     width: 100px;
     height: 100%;
     @include gray-border(right);
-    &>ul{
+
+    &>ul {
       overflow: auto;
       text-align: center;
       padding: 20px 0;
-      &>li{
+
+      &>li {
         position: relative;
         padding: 15px 0;
       }
     }
   }
-  &__select{
+
+  &__select {
     color: $color-main;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       top: 15px;
@@ -57,17 +72,9 @@
       height: 22px;
     }
   }
-  &__main{
+
+  &__main {
     height: 100%;
     flex: 1;
-  }
-}
-
-
-@include tablet{
-  :local(.menu){
-    &__header{
-      height: 70px;
-    }
   }
 }

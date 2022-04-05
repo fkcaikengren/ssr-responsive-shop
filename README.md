@@ -10,7 +10,6 @@ SSR
 
 Responsive Web
 
-Headless CMS
 
 
 
@@ -20,6 +19,13 @@ Headless CMS
 
 ## SSR搭建
 
+
+## 响应式
+
+### 响应式布局
+  媒体查询
+### 响应式图片
+  lazyload srcset
 
 
 

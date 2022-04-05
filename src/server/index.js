@@ -3,14 +3,15 @@
     这个文件会被打包成server.js, 并运行在node环境，相当于服务端。
 */
 
-const proxy = require('express-http-proxy')
-const express = require('express');
+import proxy from 'express-http-proxy'
+import express from 'express'
 import renderSSR from './middlewares/renderSSR'
+
 const app = express();
 
 app.use(express.static('dist/public'));
 
-/*以api开头的url 会交给localhost:4000进行代理 */
+/* 以api开头的url 会交给localhost:4000进行代理 */
 // app.use('/api', proxy('https://localhost:4000/',{
 //     //开启https
 //     https:true,
@@ -25,6 +26,6 @@ app.use(express.static('dist/public'));
 app.get('*', renderSSR)
 
 
-app.listen(5001, ()=>{
+app.listen(5001, () => {
     console.log('visit: localhost:5001')
 })

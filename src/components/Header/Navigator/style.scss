@@ -1,32 +1,38 @@
 @import 'sass/variant.scss';
 @import 'sass/mixin.scss';
 
-:local(.navigator){
-  display: none;
+@include mobile-tablet {
+  :local(.navigator) {
+    display: none;
+  }
 }
 
-@include desktop{
+@include desktop {
 
-  :local(.navigator){
+  :local(.navigator) {
     display: block;
     position: absolute;
     left: 150px;
-    &__tabs{
+
+    &__tabs {
       @include flex($justify: space-between);
-      &>a{
+
+      &>a {
         text-align: center;
         width: 120px;
         height: 70px;
         line-height: 70px;
         font-size: 16px;
         font-weight: 500;
-        &:hover{
+
+        &:hover {
           color: $color-main;
           text-decoration: none;
         }
       }
     }
-    &__content{
+
+    &__content {
       box-sizing: border-box;
       width: 100vw;
       position: absolute;
@@ -37,15 +43,18 @@
       @include flex($justify: start, $wrap: wrap);
       padding: 25px 80px 15px;
     }
-    &__category{
+
+    &__category {
       width: 120px;
       @include flex($direction: column);
       margin-right: 24px;
       cursor: pointer;
-      &:hover{
+
+      &:hover {
         text-decoration: none;
       }
-      &>span{
+
+      &>span {
         padding: 8px 0;
         text-decoration: none;
       }

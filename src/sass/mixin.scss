@@ -1,15 +1,40 @@
 @import './variant.scss';
-@mixin tablet {
-  @media (min-width:768px) {
+
+/*
+  media query define
+*/
+
+@mixin mobile {
+  @media (max-width:767px) {
     @content;
   }
-};
+}
+
+@mixin tablet {
+  @media (min-width:768px) and (max-width:1024px) {
+    @content;
+  }
+}
 
 @mixin desktop {
   @media (min-width:1025px) {
-    @content
+    @content;
   }
-};
+}
+
+@mixin mobile-tablet {
+  @media (max-width:1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-desktop {
+  @media (min-width:768px) {
+    @content;
+  }
+}
+
+
 
 
 // layout
@@ -23,25 +48,31 @@
 
 // border
 @mixin gray-border($postion:'', $width:1px) {
-  @if $postion  {
+  @if $postion {
     border-#{$postion}: $width solid $color-border;
-  } @else{
+  }
+
+  @else {
     border: $width solid $color-border;
   }
 }
 
 @mixin main-border($postion:'', $width:1px) {
-  @if $postion  {
+  @if $postion {
     border-#{$postion}: $width solid $color-main;
-  } @else{
+  }
+
+  @else {
     border: $width solid $color-main;
   }
 }
 
 @mixin dark-main-border($postion:'', $width:1px) {
-  @if $postion  {
+  @if $postion {
     border-#{$postion}: $width solid $color-dark-main;
-  } @else{
+  }
+
+  @else {
     border: $width solid $color-dark-main;
   }
 }

@@ -1,6 +1,11 @@
+class PageView {
+  a = "love";
 
-class PageView{
+  b = 1;
 
+  calcArea() {
+    return this.name;
+  }
 }
 
-export const pageview = new PageView()
+export const pageview = new PageView();

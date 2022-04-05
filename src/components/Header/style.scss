@@ -3,69 +3,73 @@
 
 
 :local(.header) {
-  height: 54px;
   overflow: hidden;
   box-sizing: border-box;
   @include flex($justify: space-between);
   @include gray-border($postion:bottom);
 
-  &__menuIcon{
-    padding: 15px 8px 15px 16px;
-    cursor: pointer;
+  @include mobile {
+    height: 54px;
   }
 
-  &__logo{
-    &>img{
-      height: 32px;
-      width: auto;
-    }
-  }
-
-  &__right{
-    display: flex;
-  }
-
-  &__avatar{
-    padding: 15px 16px 15px 8px;
-    cursor: pointer;
-  }
-  &__cart{
-    padding: 15px 16px 15px 8px;
-    cursor: pointer;
-  }
-
-}
-
-@include tablet{
-  :local(.header){
+  @include tablet {
     height: 70px;
   }
 
-}
+  @include desktop {
+    height: 80px;
+    padding: 0 30px;
+  }
 
-@include desktop{
-  :local(.header){
-    padding:0 30px;
-    &__menuIcon{
+  &__menuIcon {
+    padding: 15px 8px 15px 16px;
+    cursor: pointer;
+
+    @include desktop {
       display: none;
-    }    
-    &__logo{
+    }
+  }
+
+
+
+  &__logo {
+    @include desktop {
       padding: 10px 0;
-      &>img{
+    }
+
+    &>img {
+      @include mobile-tablet {
+        height: 32px;
+        width: auto;
+      }
+
+      @include desktop {
         height: 34px;
         width: auto;
       }
     }
-    &__cart{
+  }
+
+  &__right {
+    display: flex;
+  }
+
+  &__avatar {
+    padding: 15px 16px 15px 8px;
+    cursor: pointer;
+  }
+
+  &__cart {
+    cursor: pointer;
+
+    @include mobile-tablet {
+      padding: 15px 16px 15px 8px;
+    }
+
+    @include desktop {
       padding: 15px 0 15px 8px;
     }
+
   }
+
 }
-
-
-
-
-
-
-
-

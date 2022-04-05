@@ -1,13 +1,15 @@
 @import "sass/variant.scss";
 @import "sass/mixin.scss";
 
-:local(.home){
-  padding: 16px;
+:local(.home) {
   height: 400px;
-}
 
-@include desktop{
-  :local(.home){
+  @include mobile-tablet {
+    padding: 16px;
+  }
+
+  @include desktop {
     padding: 32px;
   }
+
 }
