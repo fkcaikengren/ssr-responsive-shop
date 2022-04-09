@@ -1,0 +1,7 @@
+webpack/*
+node_modules/*
+dist/*
+static/*
+scripts/*
+bin/*
+docs/*

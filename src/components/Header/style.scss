@@ -1,12 +1,11 @@
-@import "sass/variant.scss";
-@import "sass/mixin.scss";
-
+@import 'sass/variant.scss';
+@import 'sass/mixin.scss';
 
 :local(.header) {
   overflow: hidden;
   box-sizing: border-box;
   @include flex($justify: space-between);
-  @include gray-border($postion:bottom);
+  @include gray-border($postion: bottom);
 
   @include mobile {
     height: 54px;
@@ -30,14 +29,12 @@
     }
   }
 
-
-
   &__logo {
     @include desktop {
       padding: 10px 0;
     }
 
-    &>img {
+    & > img {
       @include mobile-tablet {
         height: 32px;
         width: auto;
@@ -69,7 +66,5 @@
     @include desktop {
       padding: 15px 0 15px 8px;
     }
-
   }
-
 }

@@ -1,16 +1,30 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 
 function ReactSVG(props) {
-  const { name, role = 'img', label, width, height, color,style={}, ...rest } = props;
+  const {
+    name,
+    role = 'img',
+    label,
+    width,
+    height,
+    color,
+    style = {},
+    ...rest
+  } = props;
 
   return (
-    <svg {...rest} role={role} aria-label={label || name} style={{
-        width: width+'px',
-        height: height ? height+'px' : 'auto',
-        fill: color ? color : '#333',
-        ...style
-      }}>
+    <svg
+      {...rest}
+      role={role}
+      aria-label={label || name}
+      style={{
+        width: `${width}px`,
+        height: height ? `${height}px` : 'auto',
+        fill: color || '#333',
+        ...style,
+      }}
+    >
       <use xlinkHref={`#${name}`} />
     </svg>
   );
@@ -22,4 +36,4 @@ ReactSVG.propTypes = {
   label: PropTypes.string,
 };
 
-export default ReactSVG
+export default ReactSVG;

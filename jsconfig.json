@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/*"
+      ],
+      "~/*": [
+        "./*"
+      ]
+    }
+  },
+  "exclude": [
+    ".git",
+    "node_modules",
+    ".vscode",
+    "deploy",
+    "dist",
+    "static",
+    "docs",
+    "etc",
+    "log",
+    "nginx"
+  ]
+}

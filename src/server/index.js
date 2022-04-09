@@ -1,11 +1,10 @@
-
 /*
     这个文件会被打包成server.js, 并运行在node环境，相当于服务端。
 */
 
-import proxy from 'express-http-proxy'
-import express from 'express'
-import renderSSR from './middlewares/renderSSR'
+import proxy from 'express-http-proxy';
+import express from 'express';
+import renderSSR from './middlewares/renderSSR';
 
 const app = express();
 
@@ -23,9 +22,8 @@ app.use(express.static('dist/public'));
 //     }
 // }))
 
-app.get('*', renderSSR)
-
+app.get('*', renderSSR);
 
 app.listen(5001, () => {
-    console.log('visit: localhost:5001')
-})
+  console.log('visit: http://localhost:5001');
+});

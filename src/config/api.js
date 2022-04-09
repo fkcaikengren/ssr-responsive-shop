@@ -1,6 +1,3 @@
+export const baseUrl = '';
 
-export const baseUrl = ""
-
-export default {
-}
-
+export default {};
