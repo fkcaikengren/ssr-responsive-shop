@@ -7,7 +7,6 @@ class PageView {
     return this.name;
   }
 }
-const example = () => (a, b) => a + b;
 
 export const pageview = new PageView();
 

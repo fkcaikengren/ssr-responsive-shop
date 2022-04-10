@@ -4,10 +4,9 @@
 
 import proxy from 'express-http-proxy';
 import express from 'express';
-import renderSSR from './middlewares/renderSSR';
+import renderMain from './controllers/mainController';
 
 const app = express();
-
 app.use(express.static('dist/public'));
 
 /* 以api开头的url 会交给localhost:4000进行代理 */
@@ -22,7 +21,7 @@ app.use(express.static('dist/public'));
 //     }
 // }))
 
-app.get('*', renderSSR);
+app.all('*', renderMain);
 
 app.listen(5001, () => {
   console.log('visit: http://localhost:5001');

@@ -14,9 +14,12 @@ module.exports = {
     },
   },
   extends: [
-    'airbnb', // Uses airbnb, it including the react plugins (eslint-plugin-react & eslint-plugin-jsx-a11y)
-    'plugin:promise/recommended', // Use eslint-plugin-promise as recommended
-    'plugin:prettier/recommended', // Use eslint-config-prettier & eslint-plugin-prettier, it can disable all rules which conflict with prettier.
+    // Uses airbnb, it including the react plugins (eslint-plugin-react & eslint-plugin-jsx-a11y)
+    'airbnb',
+    // Use eslint-plugin-promise as recommended
+    'plugin:promise/recommended',
+    // Use eslint-config-prettier & eslint-plugin-prettier, it can disable all rules which conflict with prettier.
+    'plugin:prettier/recommended',
   ],
   settings: {
     'import/resolver': {
@@ -26,16 +29,22 @@ module.exports = {
       },
     },
   },
-  plugins: ['prettier', 'import', 'promise'], // declare plugins then you can use the rules of them.
+  // declare plugins then you can use the rules of them.
+  plugins: ['import', 'promise', 'prettier'],
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-    'prettier/prettier': 'error', // use prettier to format
-    'import/prefer-default-export': 'warn',
+    'import/prefer-default-export': 'off',
     'import/no-unresolved': ['error', { commonjs: true }],
     'promise/always-return': 'off',
+    'prettier/prettier': 'off', // use prettier to format
+    'max-len': ['warn', { code: 100, comments: 150 }],
+    indent: 'off',
+    'implicit-arrow-linebreak': ['error', 'beside'],
+    'arrow-body-style': ['warn', 'as-needed'],
+    'prefer-arrow-callback': 'off',
     'no-console': 'off',
     'max-classes-per-file': 'off',
-    'func-names': 'warn',
+    'func-names': ['warn', 'as-needed'],
     'no-unused-vars': ['warn'],
     'no-underscore-dangle': ['warn', { allow: ['__state'] }],
     camelcase: 'warn',
@@ -56,10 +65,11 @@ module.exports = {
     'react/state-in-constructor': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-filename-extension': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/require-default-props': 'off',
     'react/prop-types': 'warn',
     'react/no-array-index-key': 'warn',
     'react/button-has-type': 'warn',
     'react/destructuring-assignment': 'warn',
-    'react/require-default-props': 'warn',
   },
 };

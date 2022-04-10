@@ -24,6 +24,6 @@ const content = (
   </Provider>
 );
 
-loadableReady((_) => {
+loadableReady(() => {
   ReactDOM.hydrate(content, document.querySelector('#root'));
 });

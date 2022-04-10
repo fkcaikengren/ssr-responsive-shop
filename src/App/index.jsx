@@ -1,9 +1,11 @@
+import React from 'react';
 import { useRoutes } from 'react-router-dom';
+import Modal from 'components/Modal';
 import routes from '../routes';
 
-const App = () => {
-  const a = useRoutes(routes);
-  return a;
-};
+function App() {
+  const routesElement = useRoutes(routes);
+  return <Modal>{routesElement}</Modal>;
+}
 
 export default App;
