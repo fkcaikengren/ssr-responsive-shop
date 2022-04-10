@@ -5,14 +5,17 @@
   width: 100%;
   max-width: 600px;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
+
   @include flex(column);
 
   &__header {
     width: 100%;
     box-sizing: border-box;
+
     @include flex;
     @include gray-border(bottom);
+
     position: relative;
 
     @include mobile {
@@ -40,20 +43,22 @@
   &__body {
     width: 100%;
     flex: 1;
+
     @include flex;
   }
 
   &__side {
     width: 100px;
     height: 100%;
+
     @include gray-border(right);
 
-    &>ul {
+    & > ul {
       overflow: auto;
       text-align: center;
       padding: 20px 0;
 
-      &>li {
+      & > li {
         position: relative;
         padding: 15px 0;
       }
@@ -68,7 +73,9 @@
       position: absolute;
       top: 15px;
       right: 0;
-      @include main-border($postion:right, $width:3px);
+
+      @include main-border($postion: right, $width: 3px);
+
       height: 22px;
     }
   }

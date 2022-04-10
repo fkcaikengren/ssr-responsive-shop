@@ -6,6 +6,10 @@
   "editor.formatOnSave": true, //Save 之后调用prettier进行格式化
   "editor.formatOnPaste": false,
   "editor.formatOnSaveMode": "modifications",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
   "eslint.run": "onSave", //onSave or onType (一旦enable eslint就会采用两者之一检查)
   "eslint.alwaysShowStatus": true,
   "eslint.probe": [
@@ -15,5 +19,13 @@
     "typescriptreact",
     "html",
     "vue"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "scss"
   ]
 }

@@ -1,36 +1,39 @@
 @import 'sass/variant.scss';
 @import 'sass/mixin.scss';
 
-:local(.footer){
+:local(.footer) {
   background-color: $color-dark-bg;
-  color: #fff;
+  color: #ffffff;
   padding: 0 32px;
-  &__main{
+
+  &__main {
     padding: 46px 0;
     display: flex;
     max-width: 800px;
   }
 
-  &__nav{
+  &__nav {
     flex: 1;
-    & > h3{
+
+    & > h3 {
       font-size: 16px;
       font-weight: 500;
     }
-    li{
+
+    li {
       padding: 6px 0;
-      & > a{
+
+      & > a {
         color: $color-light-font;
-        &:hover{
+
+        &:hover {
           text-decoration: none;
         }
       }
-      
     }
   }
 
-  &__bottom{
+  &__bottom {
     padding-bottom: 30px;
   }
-
 }

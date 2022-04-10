@@ -1,65 +1,54 @@
 @import './variant.scss';
 @import './mixin.scss';
-
 html,
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-size: 16px;
-    color: $color-dark-font;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+  color: $color-dark-font;
 }
-
 #root {
-    height: 100%;
-    box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
 }
-
 ol,
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 ul li {
-    list-style: none;
+  list-style: none;
 }
-
 ol li {
-    list-style: none;
+  list-style: none;
 }
-
 a {
-    text-decoration: none;
-    color: $color-dark-font;
+  text-decoration: none;
+  color: $color-dark-font;
 }
-
 a:hover {
-    text-decoration: underline;
-    color: $color-main;
+  text-decoration: underline;
+  color: $color-main;
 }
-
 button {
-    border: none;
+  border: none;
 }
-
 .btn {
-    font-size: 16px;
-    font-weight: 600;
-    color: $color-main;
-    @include main-border;
-    border-radius: 4px;
-    padding: 10px 30px;
-}
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  color: $color-main;
 
+  @include main-border;
+}
 .primary-btn {
-    background-color: $color-main;
+  background-color: $color-main;
 }
-
 .primary-btn:hover {
-    background-color: $color-dark-main;
+  background-color: $color-dark-main;
 }
-
 .primary-btn.btn {
-    color: #fff;
+  color: #ffffff;
 }

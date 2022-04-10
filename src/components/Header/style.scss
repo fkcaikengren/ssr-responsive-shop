@@ -4,6 +4,7 @@
 :local(.header) {
   overflow: hidden;
   box-sizing: border-box;
+
   @include flex($justify: space-between);
   @include gray-border($postion: bottom);
 

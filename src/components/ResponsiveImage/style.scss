@@ -1,13 +1,14 @@
-
 @import 'sass/variant.scss';
 @import 'sass/mixin.scss';
 
-:local(.responsiveImage){
+:local(.responsiveImage) {
   overflow: hidden;
-  &__wrapper{
+
+  &__wrapper {
     width: 100%;
     position: relative;
-    img{
+
+    img {
       width: 100%;
       position: absolute;
       top: 0;
