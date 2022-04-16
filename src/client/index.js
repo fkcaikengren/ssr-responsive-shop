@@ -11,11 +11,6 @@ import App from 'App';
 import getClientStore from '../store/clientStore';
 import '../sass/base.scss'; // client.js里引入的css会被打包为main.css
 
-// hydrate的作用：不同于render方法，它主要是完成事件注入
-/*
-    loadableReady: 在加载component后再hydrate, 否则会导致服务端和客户端渲染不一致
-*/
-
 const content = (
   <Provider store={getClientStore()}>
     <BrowserRouter>

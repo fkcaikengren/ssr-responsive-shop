@@ -4,23 +4,9 @@ import { renderToString } from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
 import Html from '../template/Html';
 
-// const context = require.context('../../client', true, /Svg\.js$/, 'sync');
-const svgCache = {};
-// (function (r) {
-//   r.keys().forEach((key) => {
-//     if (key === './Svg.js') return;
-//     const matcher = /\/(.*)Entry\//.exec(key);
-//     if (matcher[1]) {
-//       const entry = matcher[1].toLowerCase();
-//       const Svg = r(key).default;
-//       svgCache[entry] = renderToString(<Svg />);
-//     }
-//   });
-// })(context);
-
 export default class HtmlEngine {
   constructor({ entry, namespace }) {
-    this.entry = entry;
+    // this.entry = entry;
     this.namespace = namespace;
     this.extractor = new ChunkExtractor({
       statsFile: path.resolve(__dirname, './public/loadable-stats.json'),
@@ -57,7 +43,6 @@ export default class HtmlEngine {
         styleElements={styleElements}
         insertedScripts={insertedScripts}
         insertedHeads={insertedHeads}
-        svg={svgCache[this.entry]}
       />
     )}`;
   }
